@@ -4,219 +4,248 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
+  <meta name="theme-color" content="#000000">
 
   <title>FOLK TOYZ — Ancestral Masks</title>
 
-  <meta name="description"
-        content="FOLK TOYZ — Where Tales Become Toys. Discover folklore art toys and the Ancestral Masks soundtrack.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
-        rel="stylesheet">
+  <meta name="description" content="FOLK TOYZ — Where Tales Become Toys. Ancestral masks, folklore and art toys from around the world.">
 
   <style>
     * {
       box-sizing: border-box;
     }
 
+    html {
+      background: #000;
+      color-scheme: dark;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
-      background: #080808;
-      color: #f4f4f4;
-      font-family: 'Lato', Arial, sans-serif;
+      background: #000;
+      color: #f5f5f5;
+      font-family: "Leto", "Leto Sans", Arial, sans-serif;
+      text-align: center;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 30px 20px;
+      border-bottom: 1px solid #292929;
+    }
+
+    .brand {
+      font-size: clamp(25px, 5vw, 42px);
+      font-weight: 900;
+      letter-spacing: 5px;
+      margin: 0;
+    }
+
+    .tagline {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #aaa;
+      margin-top: 12px;
+      text-transform: uppercase;
     }
 
     main {
       width: 100%;
-      max-width: 600px;
-      text-align: center;
-      border: 1px solid #393939;
-      padding: 48px 30px;
-      background: #0d0d0d;
+      max-width: 760px;
+      margin: auto;
+      padding: 70px 24px 60px;
     }
 
-    .brand {
-      font-size: 14px;
-      font-weight: 900;
-      letter-spacing: 7px;
-      margin-bottom: 48px;
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 5px;
+      color: #aaa;
+      text-transform: uppercase;
+      margin-bottom: 24px;
     }
 
     h1 {
-      font-size: clamp(30px, 7vw, 48px);
-      font-weight: 900;
-      letter-spacing: 3px;
-      line-height: 1.15;
-      margin: 0 0 18px;
-    }
-
-    .subtitle {
-      color: #b8b8b8;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      line-height: 1.8;
-      margin-bottom: 36px;
-    }
-
-    .divider {
-      height: 1px;
-      background: #3b3b3b;
-      margin: 0 0 32px;
-    }
-
-    .track-label {
-      color: #999;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      margin-bottom: 18px;
-    }
-
-    .play-button {
-      display: inline-block;
-      background: #f4f4f4;
-      color: #080808;
-      border: 1px solid #f4f4f4;
-      padding: 17px 24px;
-      font-family: 'Lato', Arial, sans-serif;
-      font-size: 12px;
-      font-weight: 900;
+      font-size: clamp(34px, 8vw, 64px);
+      line-height: 1.08;
       letter-spacing: 2px;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .play-button:hover {
-      background: #080808;
-      color: #fff;
-    }
-
-    audio {
-      display: block;
-      width: 100%;
-      margin-top: 28px;
-      height: 42px;
+      margin: 0 0 25px;
+      font-weight: 900;
     }
 
     .description {
+      max-width: 540px;
+      margin: 0 auto;
+      color: #c5c5c5;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .divider {
+      width: 55px;
+      height: 1px;
+      background: #777;
+      margin: 38px auto;
+    }
+
+    .music-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #aaa;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .track-title {
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    .play-button {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #888;
+      border-radius: 0;
+      padding: 15px 32px;
+      font-family: inherit;
+      font-size: 12px;
+      letter-spacing: 3px;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+    }
+
+    .play-button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .play-button:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 4px;
+    }
+
+    .status {
+      min-height: 20px;
+      margin-top: 17px;
+      font-size: 12px;
       color: #999;
-      font-size: 13px;
-      line-height: 1.8;
-      margin: 28px auto 0;
-      max-width: 390px;
+    }
+
+    .volume-note {
+      color: #777;
+      font-size: 11px;
+      line-height: 1.6;
+      margin-top: 12px;
     }
 
     footer {
-      border-top: 1px solid #333;
-      margin-top: 42px;
-      padding-top: 24px;
+      padding: 25px 15px;
+      border-top: 1px solid #292929;
       color: #777;
       font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      line-height: 1.8;
+      letter-spacing: 2px;
+      line-height: 2;
     }
 
-    @media (max-width: 480px) {
-      body {
-        padding: 14px;
-      }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
 
-      main {
-        padding: 36px 20px;
-      }
-
-      .brand {
-        margin-bottom: 38px;
-      }
-
-      h1 {
-        letter-spacing: 2px;
-      }
-
-      .play-button {
-        padding: 16px;
-        font-size: 11px;
-      }
+    footer a:hover {
+      color: #fff;
     }
   </style>
 </head>
 
 <body>
-  <main>
+
+  <header>
     <div class="brand">FOLK TOYZ</div>
+    <div class="tagline">Where Tales Become Toys</div>
+  </header>
 
-    <h1>ANCESTRAL MASKS</h1>
+  <main>
+    <div class="eyebrow">Folklore · Art Toys · Legends</div>
 
-    <div class="subtitle">
-      WHERE TALES BECOME TOYS
-    </div>
+    <h1>ANCESTRAL<br>MASKS</h1>
+
+    <p class="description">
+      Every mask carries a story.<br>
+      Every creature guards a memory.<br>
+      From ancient traditions to forgotten legends,
+      FOLK TOYZ transforms folklore into collectible art toys.
+    </p>
 
     <div class="divider"></div>
 
-    <div class="track-label">
-      ORIGINAL SOUNDTRACK
-    </div>
+    <div class="music-label">Enter the world of FOLK TOYZ</div>
 
-    <button id="playButton" class="play-button" type="button">
-      &#9654; LISTEN TO THE SOUNDTRACK
-    </button>
+    <div class="track-title">ANCESTRAL MASKS</div>
 
-    <audio id="music" controls preload="metadata">
-      <source
-        src="https://drive.google.com/uc?export=download&amp;id=1b7huPF3m1Z-DgDPBj6QQI715ePzWOIq7"
-        type="audio/mpeg">
+    <audio id="music" preload="metadata">
+      <source src="M%C3%A1scaras%20ancestrales.mp3" type="audio/mpeg">
       Your browser does not support audio playback.
     </audio>
 
-    <p class="description">
-      An original soundtrack inspired by folklore,
-      ancient masks and ancestral rituals.
-    </p>
+    <button id="playButton" class="play-button" type="button">
+      ▶ PLAY MUSIC
+    </button>
 
-    <footer>
-      FOLK TOYZ<br>
-      OFFICIAL SOUNDTRACK
-    </footer>
+    <div id="status" class="status" aria-live="polite">
+      Press play to begin listening.
+    </div>
+
+    <div class="volume-note">
+      Instrumental music · Use your device volume to adjust the sound
+    </div>
   </main>
 
-  <script>
-    const music = document.getElementById('music');
-    const button = document.getElementById('playButton');
+  <footer>
+    FOLK TOYZ<br>
+    WHERE TALES BECOME TOYS<br>
+    <a href="https://sites.google.com/view/folk-toyz" target="_blank" rel="noopener">
+      VISIT THE FOLK TOYZ COLLECTION
+    </a>
+  </footer>
 
-    button.addEventListener('click', async () => {
-      try {
-        if (music.paused) {
+  <script>
+    const music = document.getElementById("music");
+    const playButton = document.getElementById("playButton");
+    const status = document.getElementById("status");
+
+    playButton.addEventListener("click", async () => {
+      if (music.paused) {
+        status.textContent = "Loading music…";
+
+        try {
           await music.play();
-          button.innerHTML = '&#10074;&#10074; PAUSE SOUNDTRACK';
-        } else {
-          music.pause();
-          button.innerHTML = '&#9654; LISTEN TO THE SOUNDTRACK';
+          playButton.textContent = "Ⅱ PAUSE MUSIC";
+          status.textContent = "Now playing: Ancestral Masks";
+        } catch (error) {
+          status.textContent =
+            "Could not play the track. Check the MP3 filename and try again.";
+          playButton.textContent = "▶ PLAY MUSIC";
         }
-      } catch (error) {
-        button.textContent = 'PRESS PLAY IN THE PLAYER BELOW';
+      } else {
+        music.pause();
+        playButton.textContent = "▶ PLAY MUSIC";
+        status.textContent = "Music paused.";
       }
     });
 
-    music.addEventListener('play', () => {
-      button.innerHTML = '&#10074;&#10074; PAUSE SOUNDTRACK';
+    music.addEventListener("ended", () => {
+      playButton.textContent = "▶ PLAY MUSIC";
+      status.textContent = "Track finished.";
     });
 
-    music.addEventListener('pause', () => {
-      button.innerHTML = '&#9654; LISTEN TO THE SOUNDTRACK';
-    });
-
-    music.addEventListener('ended', () => {
-      button.innerHTML = '&#9654; LISTEN TO THE SOUNDTRACK';
+    music.addEventListener("error", () => {
+      status.textContent =
+        "Audio unavailable. Please check that the MP3 file exists in the repository.";
     });
   </script>
+
 </body>
 </html>
